@@ -1,0 +1,19 @@
+[package]
+name = "burn-embed"
+version = "0.1.0"
+edition = "2024"
+license = "Apache-2.0"
+description = "Simple text embedding models built with Burn"
+
+[dependencies]
+anyhow = "1.0.102"
+burn = "0.21.0-pre.3"
+burn-store = { version = "0.21.0-pre.3", features = ["std", "safetensors"] }
+hf-hub = "0.5.0"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.149"
+tokenizers = "0.22.2"
+
+[dev-dependencies]
+burn-wgpu = { version = "0.21.0-pre.3", default-features = false, features = ["std", "webgpu"] }
+tokio = { version = "1.52.1", features = ["macros", "rt-multi-thread"] }
